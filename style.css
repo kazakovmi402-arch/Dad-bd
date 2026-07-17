@@ -165,4 +165,27 @@ body {
 
     line-height: 1.8;
 }
+.seal {
+    margin: 25px auto;
 
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 35px;
+
+    color: #ffd700;
+
+    border: 2px solid #ffd700;
+}
+
+
+.date {
+    font-size: 14px;
+    opacity: 0.7;
+}
