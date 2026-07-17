@@ -4,111 +4,107 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-
     background: linear-gradient(135deg, #05070f, #111827);
-
     color: white;
-
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
-
-
-/* Все экраны */
-
-.screen {
-
-    height: 100vh;
-
+.page {
+    min-height: 100vh;
     display: flex;
-
     flex-direction: column;
-
     justify-content: center;
-
     align-items: center;
-
     text-align: center;
-
     padding: 30px;
-
+    animation: appear 1s ease;
 }
-
-
 
 .hidden {
-
     display: none;
-
 }
-
-
-
-/* Текст */
 
 h1 {
-
-    font-size: 45px;
-
+    font-size: 3rem;
     margin-bottom: 25px;
-
+    text-shadow: 0 0 25px rgba(255,255,255,0.3);
 }
-
-
-
-p {
-
-    font-size: 20px;
-
-    line-height: 1.7;
-
-    color: #d1d5db;
-
-    margin-bottom: 40px;
-
-}
-
-
 
 h2 {
-
-    margin-top: 40px;
-
-    font-size: 32px;
-
+    font-size: 2rem;
+    margin-bottom: 25px;
 }
 
-
-
-/* Кнопка */
+p {
+    max-width: 600px;
+    font-size: 1.2rem;
+    color: #d1d5db;
+    line-height: 1.8;
+    margin: 10px;
+}
 
 button {
-
-    padding: 16px 40px;
-
+    margin-top: 35px;
+    padding: 15px 35px;
     border: none;
-
     border-radius: 50px;
-
     background: white;
-
     color: black;
-
     font-size: 18px;
-
     cursor: pointer;
-
     transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+.chess {
+    font-size: 45px;
+    opacity: 0.8;
+    margin-bottom: 35px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.certificate {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    padding: 40px;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+
+.certificate h2 {
+    color: #facc15;
+}
+
+
+@keyframes appear {
+
+from {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 }
 
 
+@keyframes float {
 
-button:hover {
+0%,100% {
+    transform: translateY(0);
+}
 
-    transform: scale(1.05);
+50% {
+    transform: translateY(-15px);
+}
 
 }
