@@ -133,3 +133,36 @@ body {
 
     background-size: 80px 80px;
 }
+.certificate {
+    margin-top: 30px;
+    padding: 40px;
+
+    max-width: 500px;
+
+    background: rgba(255,255,255,0.1);
+
+    border: 2px solid rgba(255,215,0,0.6);
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(15px);
+
+    text-align: center;
+
+    box-shadow: 0 0 40px rgba(255,215,0,0.2);
+}
+
+
+.certificate h2 {
+    color: #ffd700;
+
+    margin-bottom: 20px;
+}
+
+
+.certificate p {
+    color: #eee;
+
+    line-height: 1.8;
+}
+
