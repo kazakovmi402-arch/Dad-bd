@@ -6,70 +6,26 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: linear-gradient(135deg, #05070f, #111827);
     color: white;
     overflow-x: hidden;
+
+    background:
+    linear-gradient(
+        rgba(5,7,15,0.92),
+        rgba(17,24,39,0.92)
+    ),
+    repeating-conic-gradient(
+        rgba(255,255,255,0.08) 0% 25%,
+        transparent 0% 50%
+    );
+
+    background-size: auto, 80px 80px;
 }
 
 
-/* Шахматный фон */
-
-.chess-bg {
-    position: fixed;
-    inset: 0;
-
-    background-image:
-        linear-gradient(45deg,
-        rgba(255,255,255,0.06) 25%,
-        transparent 25%,
-        transparent 75%,
-        rgba(255,255,255,0.06) 75%),
-        linear-gradient(45deg,
-        rgba(255,255,255,0.06) 25%,
-        transparent 25%,
-        transparent 75%,
-        rgba(255,255,255,0.06) 75%);
-
-    background-size: 80px 80px;
-    background-position: 0 0, 40px 40px;
-
-    opacity: 0.5;
-
-    z-index: 0;
-    pointer-events: none;
-}
-
-
-@keyframes chessMove {
-
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-40px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-
-.hero,
-#story,
-#final {
-    position: relative;
-    z-index: 2;
-}
-
-
-
-/* Главный экран */
+/* Главная страница */
 
 .hero {
-
     height: 100vh;
 
     display: flex;
@@ -85,42 +41,35 @@ body {
 
 
 .hero h1 {
-
     font-size: 3rem;
     margin-bottom: 15px;
 
     animation: fadeUp 1s ease;
-
 }
 
 
-
 .hero h2 {
-
     color: #cfcfcf;
-
     font-weight: 300;
 
     margin-bottom: 40px;
 
     animation: fadeUp 1.4s ease;
-
 }
-
 
 
 /* Кнопки */
 
 button {
+    position: relative;
+    z-index: 5;
 
     padding: 15px 35px;
 
     border: none;
-
     border-radius: 50px;
 
     background: white;
-
     color: black;
 
     font-size: 18px;
@@ -128,20 +77,16 @@ button {
     cursor: pointer;
 
     transition: .3s;
-
 }
-
 
 
 button:hover {
-
     transform: scale(1.05);
-
 }
 
 
 
-/* Секции */
+/* Страницы */
 
 #story,
 #final {
@@ -153,7 +98,6 @@ button:hover {
     padding: 40px 25px;
 
     justify-content: center;
-
     align-items: center;
 
     flex-direction: column;
@@ -162,10 +106,9 @@ button:hover {
 
 
 
-/* Карточки */
+/* Карточка */
 
-.card,
-.letter {
+.card {
 
     max-width: 700px;
 
@@ -179,10 +122,10 @@ button:hover {
 
     text-align: center;
 
-    box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    box-shadow:
+    0 20px 60px rgba(0,0,0,.4);
 
 }
-
 
 
 .card h3 {
@@ -192,7 +135,6 @@ button:hover {
     margin-bottom: 20px;
 
 }
-
 
 
 .card p {
@@ -216,7 +158,6 @@ button:hover {
 }
 
 
-
 #final h1 {
 
     font-size: 2.8rem;
@@ -224,7 +165,6 @@ button:hover {
     margin-bottom: 30px;
 
 }
-
 
 
 #final p {
@@ -242,6 +182,14 @@ button:hover {
 .letter {
 
     margin: 40px auto;
+
+    max-width: 700px;
+
+    background: rgba(255,255,255,.08);
+
+    border-radius: 20px;
+
+    padding: 30px;
 
     line-height: 1.9;
 
@@ -262,7 +210,6 @@ button:hover {
         transform: translateY(35px);
 
     }
-
 
     to {
 
