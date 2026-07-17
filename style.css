@@ -6,111 +6,263 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background:
-        linear-gradient(rgba(5,7,15,0.92), rgba(17,24,39,0.92)),
-        repeating-conic-gradient(
-            rgba(255,255,255,0.08) 0% 25%,
-            transparent 0% 50%
-        ) 50% / 80px 80px;
-
+    background: linear-gradient(135deg, #05070f, #111827);
     color: white;
     overflow-x: hidden;
 }
 
-.page {
-    min-height: 100vh;
+
+/* Шахматный фон */
+
+.chess-bg {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 90px;
+    color: rgba(255,255,255,0.06);
+
+    z-index: 0;
+    pointer-events: none;
+
+    animation: chessMove 15s ease-in-out infinite;
+}
+
+
+@keyframes chessMove {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-40px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.hero,
+#story,
+#final {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* Главный экран */
+
+.hero {
+
+    height: 100vh;
+
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     align-items: center;
+
     text-align: center;
+
     padding: 30px;
-    animation: appear 1s ease;
 }
 
-.hidden {
-    display: none;
-}
 
-h1 {
+.hero h1 {
+
     font-size: 3rem;
-    margin-bottom: 25px;
-    text-shadow: 0 0 25px rgba(255,255,255,0.3);
+    margin-bottom: 15px;
+
+    animation: fadeUp 1s ease;
+
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 25px;
+
+
+.hero h2 {
+
+    color: #cfcfcf;
+
+    font-weight: 300;
+
+    margin-bottom: 40px;
+
+    animation: fadeUp 1.4s ease;
+
 }
 
-p {
-    max-width: 600px;
-    font-size: 1.2rem;
-    color: #d1d5db;
-    line-height: 1.8;
-    margin: 10px;
-}
+
+
+/* Кнопки */
 
 button {
-    margin-top: 35px;
+
     padding: 15px 35px;
+
     border: none;
+
     border-radius: 50px;
+
     background: white;
+
     color: black;
+
     font-size: 18px;
+
     cursor: pointer;
-    transition: 0.3s;
+
+    transition: .3s;
+
 }
+
+
 
 button:hover {
-    transform: scale(1.08);
+
+    transform: scale(1.05);
+
 }
 
-.chess {
-    font-size: 45px;
-    opacity: 0.8;
-    margin-bottom: 35px;
-    animation: float 3s infinite ease-in-out;
+
+
+/* Секции */
+
+#story,
+#final {
+
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 40px 25px;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex-direction: column;
+
 }
 
-.certificate {
-    background: rgba(255,255,255,0.08);
+
+
+/* Карточки */
+
+.card,
+.letter {
+
+    max-width: 700px;
+
+    background: rgba(255,255,255,.08);
+
     backdrop-filter: blur(15px);
+
     border-radius: 25px;
-    padding: 40px;
-    max-width: 500px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.5);
-}
 
-.certificate h2 {
-    color: #facc15;
-}
+    padding: 35px;
 
+    text-align: center;
 
-@keyframes appear {
-
-from {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
+    box-shadow: 0 20px 60px rgba(0,0,0,.4);
 
 }
 
 
-@keyframes float {
 
-0%,100% {
-    transform: translateY(0);
+.card h3 {
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+
 }
 
-50% {
-    transform: translateY(-15px);
+
+
+.card p {
+
+    line-height: 1.8;
+
+    color: #ddd;
+
+    margin-bottom: 30px;
+
 }
+
+
+
+/* Финал */
+
+#final {
+
+    text-align: center;
+
+}
+
+
+
+#final h1 {
+
+    font-size: 2.8rem;
+
+    margin-bottom: 30px;
+
+}
+
+
+
+#final p {
+
+    font-size: 1.2rem;
+
+    color: #ddd;
+
+    line-height: 1.8;
+
+}
+
+
+
+.letter {
+
+    margin: 40px auto;
+
+    line-height: 1.9;
+
+    color: #eee;
+
+}
+
+
+
+/* Анимация */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(35px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
 
 }
