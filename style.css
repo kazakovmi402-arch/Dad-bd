@@ -13,18 +13,17 @@ body {
 
     background:
     linear-gradient(
-        rgba(5,7,15,0.92),
-        rgba(17,24,39,0.92)
+        rgba(5,7,15,0.94),
+        rgba(5,7,15,0.94)
     ),
-
     repeating-conic-gradient(
-        #222 0% 25%,
+        #2a2a2a 0% 25%,
         #111 0% 50%
     );
 
     background-size:
     auto,
-    80px 80px;
+    100px 100px;
 }
 
 .page {
