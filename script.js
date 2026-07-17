@@ -1,16 +1,18 @@
-function startSite() {
+function showSection(id) {
 
-    document.getElementById("home").classList.add("hidden");
+    const sections = document.querySelectorAll(".page");
 
-    document.getElementById("thanks").classList.remove("hidden");
+    sections.forEach(section => {
+        section.classList.add("hidden");
+    });
 
-}
+    const next = document.getElementById(id);
 
+    next.classList.remove("hidden");
 
-function finishSite() {
-
-    document.getElementById("thanks").classList.add("hidden");
-
-    document.getElementById("end").classList.remove("hidden");
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 }
