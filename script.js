@@ -1,18 +1,24 @@
-function showSection(id) {
+const startButton = document.getElementById("start");
+const nextButton = document.getElementById("next");
 
-    const sections = document.querySelectorAll(".page");
+const hero = document.getElementById("hero");
+const story = document.getElementById("story");
+const final = document.getElementById("final");
 
-    sections.forEach(section => {
-        section.classList.add("hidden");
-    });
 
-    const next = document.getElementById(id);
+startButton.onclick = function() {
 
-    next.classList.remove("hidden");
+    hero.style.display = "none";
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    story.style.display = "flex";
 
-}
+};
+
+
+nextButton.onclick = function() {
+
+    story.style.display = "none";
+
+    final.style.display = "flex";
+
+};
