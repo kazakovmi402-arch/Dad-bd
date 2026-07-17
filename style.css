@@ -9,8 +9,9 @@ body {
 
     color: white;
 
-    overflow: hidden;
-
+    overflow-x: hidden;
+    overflow-y: auto;
+    
     background:
     linear-gradient(
         rgba(5,7,15,0.94),
