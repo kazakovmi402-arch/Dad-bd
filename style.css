@@ -193,6 +193,8 @@ button:hover {
 
 
 
+
+
 /* Анимация */
 
 @keyframes fadeUp {
@@ -214,4 +216,13 @@ to {
 
 }
 
+}
+.hero {
+    position: relative;
+    z-index: 10;
+}
+
+button {
+    position: relative;
+    z-index: 20;
 }
