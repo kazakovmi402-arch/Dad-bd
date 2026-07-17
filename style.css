@@ -190,3 +190,27 @@ body {
     font-size: 14px;
     opacity: 0.7;
 }
+.cake {
+    margin: 25px auto;
+
+    font-size: 70px;
+
+    animation: cakeMove 2s infinite ease-in-out;
+}
+
+
+@keyframes cakeMove {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
