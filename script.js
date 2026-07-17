@@ -1,24 +1,16 @@
-const startButton = document.getElementById("start");
-const nextButton = document.getElementById("next");
+function startSite() {
 
-const hero = document.getElementById("hero");
-const story = document.getElementById("story");
-const final = document.getElementById("final");
+    document.getElementById("home").classList.add("hidden");
 
+    document.getElementById("thanks").classList.remove("hidden");
 
-startButton.onclick = function() {
-
-    hero.style.display = "none";
-
-    story.style.display = "flex";
-
-};
+}
 
 
-nextButton.onclick = function() {
+function finishSite() {
 
-    story.style.display = "none";
+    document.getElementById("thanks").classList.add("hidden");
 
-    final.style.display = "flex";
+    document.getElementById("end").classList.remove("hidden");
 
-};
+}
